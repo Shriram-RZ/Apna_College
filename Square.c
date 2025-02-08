@@ -6,4 +6,5 @@ int main(){
     scanf("%f",&side);
     area = side * side;
     printf("The area of the square is : %f",area);
+    return 0;
 }
