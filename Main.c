@@ -1,26 +1,28 @@
-#include <stdio.h>
+#include<stdio.h>
 
-void indianUser(){
-    printf("Hello Indian");
-}
-
-void frenchUser(){
-    printf("Hello French");
-}
+int calculator(int num_1 , int num_2 , char ch);
 
 int main(){
-    char user;
-    printf("Enter User : ");
-    scanf("%c",&user);
-    switch(user){
-        case 'i':
-        indianUser();
-        break;
-        case 'f':
-        frenchUser();
-        break;
-        default:
-        printf("Invalid");
+    int  number_1 , number_2 , answer;
+    char symbol;
+    printf("Enter Number 1 : ");
+    scanf("%d",&number_1);
+    printf("Enter Number_2 : ");
+    scanf("%d",&number_2);
+    printf("Enter Symbol : ");
+    scanf(" %c",&symbol);
+
+    answer = calculator(number_1 , number_2 , symbol);
+
+    printf("%d",answer);
+}
+
+int calculator(int num_1 , int num_2 , char ch){
+    switch(ch){
+        case '+': return num_1 + num_2;
+        case '-': return num_1 - num_2;
+        case '*': return num_1 * num_2;
+        case '/': return num_1 / num_2;
+        default: return 0;
     }
-    return 0;
 }

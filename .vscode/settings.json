@@ -3,6 +3,11 @@
         "*.sqlbook": "sql",
         "*.ndjson": "jsonl",
         "*.dbclient-js": "javascript",
-        "Hi.C": "cpp"
+        "Hi.C": "cpp",
+        "format": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp"
     }
 }
