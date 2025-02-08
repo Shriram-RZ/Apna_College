@@ -1,15 +1,26 @@
 #include <stdio.h>
 
+void indianUser(){
+    printf("Hello Indian");
+}
+
+void frenchUser(){
+    printf("Hello French");
+}
+
 int main(){
-    int n , sum = 0;
-    printf("Enter Number : ");
-    scanf("%d",&n);
-    for(int i = 1 , j = n ; i <= n && j >= 1 ; i++ , j--){
-        sum = sum + i;
-        printf("%d and %d \n",i,j);
-
-
+    char user;
+    printf("Enter User : ");
+    scanf("%c",&user);
+    switch(user){
+        case 'i':
+        indianUser();
+        break;
+        case 'f':
+        frenchUser();
+        break;
+        default:
+        printf("Invalid");
     }
-    printf("Total Sum is : %d",sum);
     return 0;
 }
