@@ -1,28 +1,25 @@
-#include<stdio.h>
-
-int calculator(int num_1 , int num_2 , char ch);
+#include <stdio.h>
 
 int main(){
-    int  number_1 , number_2 , answer;
-    char symbol;
-    printf("Enter Number 1 : ");
-    scanf("%d",&number_1);
-    printf("Enter Number_2 : ");
-    scanf("%d",&number_2);
-    printf("Enter Symbol : ");
-    scanf(" %c",&symbol);
+    int age = 22;
+    int *ptr = &age;
+    int _age = (int) &ptr;
 
-    answer = calculator(number_1 , number_2 , symbol);
+    char symbol = '*';
+    char *ptr_Symbol = &symbol;
+    char _symbol = *ptr_Symbol;
+    printf("%p \n",&age);
+    printf("%p \n",ptr); //hexadecimal
+    printf("%p \n",&ptr);
+    printf("%d \n",*ptr);
 
-    printf("%d",answer);
-}
+    printf("%c \n",_symbol);
 
-int calculator(int num_1 , int num_2 , char ch){
-    switch(ch){
-        case '+': return num_1 + num_2;
-        case '-': return num_1 - num_2;
-        case '*': return num_1 * num_2;
-        case '/': return num_1 / num_2;
-        default: return 0;
-    }
+
+    printf("%d \n",_age);
+    printf("%p \n",&_age);
+    printf("%u \n",ptr); //Number
+    printf("%u \n",&age);
+    printf("%p",symbol);
+    
 }
