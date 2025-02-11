@@ -1,23 +1,29 @@
 #include <stdio.h>
 
+void sqaure(int n);
+void _sqaure(int *n);
+
 int main(){
-    int *ptr;
-    int x = 0;
+    int number = 10;
+    sqaure(number);
+    printf("The Number is : %d\n",number);
 
-    ptr = &x;
-    *ptr = 0;
+    _sqaure(&number);
+    printf("The Number is Reference %d\n",number);
 
-    printf(" x = %d\n",x);
-    printf(" *ptr = %d\n",*ptr);
 
-    *ptr += 5;
-
-    printf(" x = %d\n",x);
-    printf(" *ptr = %d\n",*ptr);
-
-    (*ptr)++;
-
-    printf(" x = %d\n",x);
-    printf(" *ptr = %d\n",*ptr);
     
+}
+
+//Call by Value
+void sqaure(int n){
+    n = n * n;
+    printf("The Square is : %d\n",n);
+}
+
+
+//Call by Reference
+void _sqaure(int *n){
+    *n = (*n) * (*n);
+    printf("The Square is Reference %d\n",*n);
 }
