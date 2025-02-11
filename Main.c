@@ -1,29 +1,19 @@
 #include <stdio.h>
 
-void sqaure(int n);
-void _sqaure(int *n);
+void doWork(int a , int b , int *sum , int *prod , int *avg);
 
 int main(){
-    int number = 10;
-    sqaure(number);
-    printf("The Number is : %d\n",number);
+    int a , b , sum , prod , avg;
+    a = 10;
+    b = 20;
 
-    _sqaure(&number);
-    printf("The Number is Reference %d\n",number);
-
-
-    
-}
-
-//Call by Value
-void sqaure(int n){
-    n = n * n;
-    printf("The Square is : %d\n",n);
+    doWork(a,b,&sum,&prod,&avg);
+    printf("The Sum is : %d \n The Product is : %d \n The Average is : %d",sum,prod,avg);
 }
 
 
-//Call by Reference
-void _sqaure(int *n){
-    *n = (*n) * (*n);
-    printf("The Square is Reference %d\n",*n);
+void doWork(int a , int b , int *sum , int *prod , int *avg){
+    *sum = a + b;
+    *prod = a * b;
+    *avg = (a+b)/2;
 }
